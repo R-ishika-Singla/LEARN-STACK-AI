@@ -1,12 +1,12 @@
 import 'dotenv/config'; 
 import { PrismaClient } from '@prisma/client';
 
+
 if (!process.env.DATABASE_URL) {
-  throw new Error("check env file cant load .");
+  throw new Error("DATABASE_URL is missing in .env file");
 }
 
-const prisma = new PrismaClient({
-  accelerateUrl: process.env.DATABASE_URL,
-});
+
+const prisma = new PrismaClient();
 
 export default prisma;
