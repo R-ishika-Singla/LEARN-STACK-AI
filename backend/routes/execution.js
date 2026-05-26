@@ -178,7 +178,6 @@ router.get('/questions', authenticateToken, async (req, res) => {
   }
 });
 
-// --- IMPORT CODEFORCES PROBLEM ---
 router.post('/import-codeforces', authenticateToken, async (req, res) => {
   const { url } = req.body;
   const match = url.match(/(?:contest|problem)\/(\d+)\/(?:problem\/)?([A-Z0-9]+)/i);
