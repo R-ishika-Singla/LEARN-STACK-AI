@@ -1,0 +1,97 @@
+// Unified Prisma Schema
+// Learn more: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  CANDIDATE
+  RECRUITER
+  ADMIN
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String? // Null if OAuth used
+  name         String?
+  avatarUrl    String?
+  role         Role     @default(CANDIDATE)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relationships
+  linkedAccounts  LinkedAccount?
+  submissions     Submission[]
+  aiSummary       AISummary?
+  profileSnapshot ProfileSnapshot?
+}
+
+model LinkedAccount {
+  id               String   @id @default(uuid())
+  userId           String   @unique
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  githubHandle     String?
+  leetcodeHandle   String?
+  codeforcesHandle String?
+  updatedAt        DateTime @updatedAt
+}
+
+model ProfileSnapshot {
+  id     String @id @default(uuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // JSON payloads from APIs to prevent rate-limiting re-fetches
+  githubData     Json?
+  leetcodeData   Json?
+  codeforcesData Json?
+
+  lastSyncedAt DateTime @default(now())
+}
+
+model AISummary {
+  id     String @id @default(uuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // The predictable template outputs
+  summaryText        String @db.Text
+  technicalStrengths String @db.Text
+
+  lastGeneratedAt DateTime @default(now())
+}
+
+model Problem {
+  id          String       @id @default(uuid())
+  title       String
+  description String       @db.Text
+  difficulty  String // Easy, Medium, Hard
+  testCases   Json // Stores input/output pairs
+  createdAt   DateTime     @default(now())
+  submissions Submission[]
+}
+
+model Submission {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  problemId String?
+  problem   Problem? @relation(fields: [problemId], references: [id])
+
+  codeSnippet String @db.Text
+  language    String
+
+  // Judge0 status
+  status        String
+  executionTime Float?
+  memory        Float?
+
+  submittedAt DateTime @default(now())
+}
