@@ -1,0 +1,502 @@
+/* AnimatedGlobe.css */
+
+.animated-globe-container {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: transparent;
+  perspective: 1000px;
+}
+
+.globe-space {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* ============ SPHERE STYLING ============ */
+
+.sphere-wrapper {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0 0 60px rgba(52, 211, 153, 0.2));
+  z-index: 1;
+}
+
+.sphere {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 20px 40px rgba(52, 211, 153, 0.15));
+}
+
+.continent-shape {
+  mix-blend-mode: screen;
+}
+
+/* ============ RIBBON ANIMATION ============ */
+
+.ribbon-container {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ribbon-below {
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ribbon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 25px rgba(52, 211, 153, 0.3));
+}
+
+/* ============ FLOATING ICONS ANIMATION ============ */
+
+.floating-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(52, 211, 153, 0.1);
+  border: 2px solid rgba(52, 211, 153, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.icon-wrapper:hover {
+  background: rgba(52, 211, 153, 0.2);
+  border-color: rgba(52, 211, 153, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+}
+
+.icon {
+  color: #34d399;
+  filter: drop-shadow(0 0 10px rgba(52, 211, 153, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+.icon-wrapper.bracket,
+.icon-wrapper.arrow {
+  font-weight: bold;
+  font-size: 20px;
+  color: #06b6d4;
+  font-family: 'Monaco', 'Courier New', monospace;
+}
+
+/* ============ ICON POSITIONS & ANIMATIONS ============ */
+
+/* GitHub Icon - Top Right */
+.github-icon {
+  top: 20px;
+  right: 40px;
+  animation: floatGithub 6s ease-in-out infinite;
+}
+
+.github-icon .icon {
+  animation: floatGithub 6s ease-in-out infinite;
+}
+
+@keyframes floatGithub {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotateZ(5deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(20px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(-25px) translateX(5px) rotateZ(-5deg);
+  }
+}
+
+/* Code/Leetcode Icon - Left */
+.code-icon {
+  top: 120px;
+  left: 30px;
+  animation: floatCode 7s ease-in-out infinite;
+}
+
+.code-icon .icon {
+  animation: floatCode 7s ease-in-out infinite;
+}
+
+@keyframes floatCode {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(15px) translateX(-15px) rotateZ(-3deg);
+  }
+  50% {
+    transform: translateY(25px) translateX(-25px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(10px) translateX(-20px) rotateZ(3deg);
+  }
+}
+
+/* Terminal Icon - Bottom Right */
+.terminal-icon {
+  bottom: 40px;
+  right: 50px;
+  animation: floatTerminal 8s ease-in-out infinite;
+}
+
+.terminal-icon .icon {
+  animation: floatTerminal 8s ease-in-out infinite;
+}
+
+@keyframes floatTerminal {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-15px) translateX(20px) rotateZ(4deg);
+  }
+  50% {
+    transform: translateY(-20px) translateX(25px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(-10px) translateX(15px) rotateZ(-4deg);
+  }
+}
+
+/* Bracket Icon - Bottom Left */
+.bracket-icon {
+  bottom: 60px;
+  left: 40px;
+  animation: floatBracket 6.5s ease-in-out infinite;
+}
+
+.bracket-icon .icon-wrapper.bracket {
+  animation: floatBracket 6.5s ease-in-out infinite;
+}
+
+@keyframes floatBracket {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(12px) translateX(-10px) rotateZ(-2deg);
+  }
+  50% {
+    transform: translateY(20px) translateX(-18px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(8px) translateX(-12px) rotateZ(2deg);
+  }
+}
+
+/* Arrow Icon - Top Left */
+.arrow-icon {
+  top: 80px;
+  left: 50px;
+  animation: floatArrow 7.5s ease-in-out infinite;
+}
+
+.arrow-icon .icon-wrapper.arrow {
+  animation: floatArrow 7.5s ease-in-out infinite;
+}
+
+@keyframes floatArrow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-18px) translateX(12px) rotateZ(3deg);
+  }
+  50% {
+    transform: translateY(-28px) translateX(20px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(-12px) translateX(8px) rotateZ(-3deg);
+  }
+}
+
+/* Generic float animation fallback */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ============ GLOW EFFECTS ============ */
+
+.glow-effect {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.glow-emerald {
+  width: 400px;
+  height: 400px;
+  background: #34d399;
+  top: 10%;
+  left: 5%;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+.glow-cyan {
+  width: 350px;
+  height: 350px;
+  background: #06b6d4;
+  bottom: 5%;
+  right: 10%;
+  animation: glowPulse 8s ease-in-out infinite reverse;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+@media (max-width: 1024px) {
+  .animated-globe-container {
+    min-height: 450px;
+    height: 450px;
+  }
+
+  .sphere-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ribbon-container {
+    width: 320px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-globe-container {
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .sphere-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ribbon-container {
+    width: 280px;
+    height: 140px;
+  }
+
+  .globe-space {
+    width: 350px;
+    height: 350px;
+  }
+
+  .sphere-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ribbon-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .floating-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .github-icon {
+    top: 10px;
+    right: 20px;
+  }
+
+  .code-icon {
+    top: 100px;
+    left: 10px;
+  }
+
+  .terminal-icon {
+    bottom: 20px;
+    right: 30px;
+  }
+
+  .bracket-icon {
+    bottom: 40px;
+    left: 20px;
+  }
+
+  .arrow-icon {
+    top: 60px;
+    left: 30px;
+  }
+
+  .glow-effect {
+    filter: blur(60px);
+  }
+
+  .glow-emerald {
+    width: 300px;
+    height: 300px;
+  }
+
+  .glow-cyan {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-globe-container {
+    min-height: 400px;
+  }
+
+  .globe-space {
+    width: 280px;
+    height: 280px;
+  }
+
+  .sphere-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ribbon-container {
+    width: 210px;
+    height: 210px;
+  }
+
+  .floating-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .github-icon {
+    top: 5px;
+    right: 10px;
+  }
+
+  .code-icon {
+    top: 80px;
+    left: 5px;
+  }
+
+  .terminal-icon {
+    bottom: 10px;
+    right: 15px;
+  }
+
+  .bracket-icon {
+    bottom: 30px;
+    left: 10px;
+  }
+
+  .arrow-icon {
+    top: 50px;
+    left: 20px;
+  }
+
+  .glow-effect {
+    filter: blur(40px);
+  }
+
+  .glow-emerald {
+    width: 200px;
+    height: 200px;
+  }
+
+  .glow-cyan {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* ============ DEVELOPER ILLUSTRATION ANIMATIONS ============ */
+
+.dev-arm-typing {
+  animation: devTyping 2s ease-in-out infinite;
+  transform-origin: 131px 90px;
+}
+
+@keyframes devTyping {
+  0%, 100% {
+    transform: translateY(0px) rotate(20deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(20deg);
+  }
+}
+
+.dev-screen-content {
+  animation: screenPulse 3s ease-in-out infinite;
+}
+
+@keyframes screenPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
