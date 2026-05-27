@@ -41,3 +41,8 @@ app.include_router(documents.router, prefix="/documents")
 @app.get("/")
 def health_check():
     return {"status": "Coding Buddy API is running"}
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000)
