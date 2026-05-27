@@ -1,11 +1,13 @@
-// DevSphere Unified & RAG Study Buddy Prisma Schema
+// DevSphere Unified Prisma Schema
 // Learn more: https://pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
 }
+
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 enum Role {
@@ -15,24 +17,20 @@ enum Role {
 }
 
 model User {
-  id           String   @id @default(uuid())
-  email        String   @unique
-  passwordHash String? // Null if OAuth used
-  name         String?
-  avatarUrl    String?
-  role         Role     @default(CANDIDATE)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  id             String             @id @default(uuid())
+  email          String             @unique
+  passwordHash   String?            // Null if OAuth used
+  name           String?
+  avatarUrl      String?
+  role           Role               @default(CANDIDATE)
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
 
-  // Coding Platform Relationships
-  linkedAccounts  LinkedAccount?
-  submissions     Submission[]
-  aiSummary       AISummary?
+  // Relationships
+  linkedAccounts LinkedAccount?
+  submissions    Submission[]
+  aiSummary      AISummary?
   profileSnapshot ProfileSnapshot?
-
-  //  RAG Study Buddy Relationships
-  documents       Document[]
-  studyChats      StudyChat[]
 }
 
 model LinkedAccount {
@@ -46,9 +44,9 @@ model LinkedAccount {
 }
 
 model ProfileSnapshot {
-  id             String @id @default(uuid())
-  userId         String @unique
-  user           User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id             String   @id @default(uuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   
   // JSON payloads from APIs to prevent rate-limiting re-fetches
   githubData     Json?
@@ -59,13 +57,13 @@ model ProfileSnapshot {
 }
 
 model AISummary {
-  id                 String @id @default(uuid())
-  userId             String @unique
-  user               User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                 String   @id @default(uuid())
+  userId             String   @unique
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   
   // The predictable template outputs
-  summaryText        String @db.Text
-  technicalStrengths String @db.Text
+  summaryText        String   @db.Text
+  technicalStrengths String   @db.Text
   
   lastGeneratedAt    DateTime @default(now())
 }
@@ -81,51 +79,20 @@ model Problem {
 }
 
 model Submission {
-  id            String   @id @default(uuid())
-  userId        String
-  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   
-  problemId     String?
-  problem       Problem? @relation(fields: [problemId], references: [id])
+  problemId      String?
+  problem        Problem? @relation(fields: [problemId], references: [id])
 
-  codeSnippet   String   @db.Text
-  language      String
+  codeSnippet    String   @db.Text
+  language       String
   
   // Judge0 status
-  status        String
-  executionTime Float?
-  memory        Float?
+  status         String
+  executionTime  Float?
+  memory         Float?
   
-  submittedAt   DateTime @default(now())
-}
-
-// ==========================================
-// 🔥 NEW RAG STUDY BUDDY MODELS 🔥
-// ==========================================
-
-model Document {
-  id        String   @id @default(uuid())
-  fileName  String
-  fileUrl   String   // Cloudinary path ya local uploads path
-  fileType  String   // pdf, txt, docs
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
-  chunks    Chunk[]
-}
-
-model Chunk {
-  id         String   @id @default(uuid())
-  content    String   @db.Text // PDF ka text content chunk form me
-  documentId String
-  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
-}
-
-model StudyChat {
-  id        String   @id @default(uuid())
-  query     String   @db.Text // User ka question
-  response  String   @db.Text // AI ka generated answer
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
+  submittedAt    DateTime @default(now())
 }

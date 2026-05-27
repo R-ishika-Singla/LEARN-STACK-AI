@@ -1,5 +1,34 @@
 node_modules
 # Keep environment variables out of version control
 .env
+.env.local
+.env.*.local
 
 /generated/prisma
+
+# Documentation and debugging guides (non-essential)
+*.md
+*.png
+*.jpg
+*.jpeg
+
+# Claude Code
+.claude/
+.claude/**
+
+# Uploads
+uploads/
+uploads/**
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+.npm/
+
+# Temporary
+tmp/
+temp/
+*.tmp

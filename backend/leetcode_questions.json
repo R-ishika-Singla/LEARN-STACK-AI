@@ -1,0 +1,884 @@
+[
+    {
+        "id": 0,
+        "title": "A + B",
+        "difficulty": "Easy",
+        "topics": [
+            "Math",
+            "Basic"
+        ],
+        "description": "<p>Given two integers <code>a</code> and <code>b</code>, return their sum.</p>\n\n<p><strong>Constraints:</strong></p>\n<ul>\n<li><code>-1000 &lt;= a, b &lt;= 1000</code></li>\n</ul>",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "1\n2",
+                    "expectedOutput": "3",
+                    "isSample": true
+                },
+                {
+                    "input": "10\n-5",
+                    "expectedOutput": "5",
+                    "isSample": true
+                },
+                {
+                    "input": "0\n0",
+                    "expectedOutput": "0",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/a-+-b"
+    },
+    {
+        "id": 1,
+        "title": "Two Sum",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "Hash Table"
+        ],
+        "description": "<p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\n\n<p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>\n\n<p>You can return the answer in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,7,11,15], target = 9\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,4], target = 6\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3], target = 6\n<strong>Output:</strong> [0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><strong>Only one valid answer exists.</strong></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face=\"monospace\">&nbsp;</font>time complexity?",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[2,7,11,15]\n9",
+                    "expectedOutput": "[0,1]",
+                    "isSample": true
+                },
+                {
+                    "input": "[3,2,4]\n6",
+                    "expectedOutput": "[1,2]",
+                    "isSample": true
+                },
+                {
+                    "input": "[3,3]\n6",
+                    "expectedOutput": "[0,1]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/two-sum"
+    },
+    {
+        "id": 2,
+        "title": "Add Two Numbers",
+        "difficulty": "Medium",
+        "topics": [
+            "Linked List",
+            "Math",
+            "Recursion"
+        ],
+        "description": "<p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong>, and each of their nodes contains a single digit. Add the two numbers and return the sum&nbsp;as a linked list.</p>\n\n<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg\" style=\"width: 483px; height: 342px;\" />\n<pre>\n<strong>Input:</strong> l1 = [2,4,3], l2 = [5,6,4]\n<strong>Output:</strong> [7,0,8]\n<strong>Explanation:</strong> 342 + 465 = 807.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> l1 = [0], l2 = [0]\n<strong>Output:</strong> [0]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\n<strong>Output:</strong> [8,9,9,9,0,0,0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in each linked list is in the range <code>[1, 100]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 9</code></li>\n\t<li>It is guaranteed that the list represents a number that does not have leading zeros.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[2,4,3]\n[5,6,4]",
+                    "expectedOutput": "[7,0,8]",
+                    "isSample": true
+                },
+                {
+                    "input": "[0]\n[0]",
+                    "expectedOutput": "[0]",
+                    "isSample": true
+                },
+                {
+                    "input": "[9,9,9,9,9,9,9]\n[9,9,9,9]",
+                    "expectedOutput": "[8,9,9,9,0,0,0,1]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/add-two-numbers"
+    },
+    {
+        "id": 3,
+        "title": "Longest Substring Without Repeating Characters",
+        "difficulty": "Medium",
+        "topics": [
+            "Hash Table",
+            "String",
+            "Sliding Window"
+        ],
+        "description": "<p>Given a string <code>s</code>, find the length of the <strong>longest</strong> <span data-keyword=\"substring-nonempty\"><strong>substring</strong></span> without duplicate characters.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abcabcbb&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;abc&quot;, with the length of 3. Note that <code>&quot;bca&quot;</code> and <code>&quot;cab&quot;</code> are also correct answers.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;bbbbb&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The answer is &quot;b&quot;, with the length of 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;pwwkew&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;wke&quot;, with the length of 3.\nNotice that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "&quot;abcabcbb&quot;",
+                    "expectedOutput": "3",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;bbbbb&quot;",
+                    "expectedOutput": "1",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;pwwkew&quot;",
+                    "expectedOutput": "3",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters"
+    },
+    {
+        "id": 4,
+        "title": "Median of Two Sorted Arrays",
+        "difficulty": "Hard",
+        "topics": [
+            "Array",
+            "Binary Search",
+            "Divide and Conquer"
+        ],
+        "description": "<p>Given two sorted arrays <code>nums1</code> and <code>nums2</code> of size <code>m</code> and <code>n</code> respectively, return <strong>the median</strong> of the two sorted arrays.</p>\n\n<p>The overall run time complexity should be <code>O(log (m+n))</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,3], nums2 = [2]\n<strong>Output:</strong> 2.00000\n<strong>Explanation:</strong> merged array = [1,2,3] and median is 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,2], nums2 = [3,4]\n<strong>Output:</strong> 2.50000\n<strong>Explanation:</strong> merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums1.length == m</code></li>\n\t<li><code>nums2.length == n</code></li>\n\t<li><code>0 &lt;= m &lt;= 1000</code></li>\n\t<li><code>0 &lt;= n &lt;= 1000</code></li>\n\t<li><code>1 &lt;= m + n &lt;= 2000</code></li>\n\t<li><code>-10<sup>6</sup> &lt;= nums1[i], nums2[i] &lt;= 10<sup>6</sup></code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[1,3]\n[2]",
+                    "expectedOutput": "2.00000",
+                    "isSample": true
+                },
+                {
+                    "input": "[1,2]\n[3,4]",
+                    "expectedOutput": "2.50000",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/median-of-two-sorted-arrays"
+    },
+    {
+        "id": 5,
+        "title": "Longest Palindromic Substring",
+        "difficulty": "Medium",
+        "topics": [
+            "Two Pointers",
+            "String",
+            "Dynamic Programming"
+        ],
+        "description": "<p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword=\"palindromic-string\"><em>palindromic</em></span> <span data-keyword=\"substring-nonempty\"><em>substring</em></span> in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;babad&quot;\n<strong>Output:</strong> &quot;bab&quot;\n<strong>Explanation:</strong> &quot;aba&quot; is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbbd&quot;\n<strong>Output:</strong> &quot;bb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consist of only digits and English letters.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "&quot;babad&quot;",
+                    "expectedOutput": "&quot;bab&quot;",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;cbbd&quot;",
+                    "expectedOutput": "&quot;bb&quot;",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/longest-palindromic-substring"
+    },
+    {
+        "id": 6,
+        "title": "Zigzag Conversion",
+        "difficulty": "Medium",
+        "topics": [
+            "String"
+        ],
+        "description": "<p>The string <code>&quot;PAYPALISHIRING&quot;</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>\n\n<pre>\nP   A   H   N\nA P L S I I G\nY   I   R\n</pre>\n\n<p>And then read line by line: <code>&quot;PAHNAPLSIIGYIR&quot;</code></p>\n\n<p>Write the code that will take a string and make this conversion given a number of rows:</p>\n\n<pre>\nstring convert(string s, int numRows);\n</pre>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;PAYPALISHIRING&quot;, numRows = 3\n<strong>Output:</strong> &quot;PAHNAPLSIIGYIR&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;PAYPALISHIRING&quot;, numRows = 4\n<strong>Output:</strong> &quot;PINALSIGYAHRPI&quot;\n<strong>Explanation:</strong>\nP     I    N\nA   L S  I G\nY A   H R\nP     I\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;A&quot;, numRows = 1\n<strong>Output:</strong> &quot;A&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consists of English letters (lower-case and upper-case), <code>&#39;,&#39;</code> and <code>&#39;.&#39;</code>.</li>\n\t<li><code>1 &lt;= numRows &lt;= 1000</code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "&quot;PAYPALISHIRING&quot;\n3",
+                    "expectedOutput": "&quot;PAHNAPLSIIGYIR&quot;",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;PAYPALISHIRING&quot;\n4",
+                    "expectedOutput": "&quot;PINALSIGYAHRPI&quot;",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;A&quot;\n1",
+                    "expectedOutput": "&quot;A&quot;",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/zigzag-conversion"
+    },
+    {
+        "id": 7,
+        "title": "Reverse Integer",
+        "difficulty": "Medium",
+        "topics": [
+            "Math"
+        ],
+        "description": "<p>Given a signed 32-bit integer <code>x</code>, return <code>x</code><em> with its digits reversed</em>. If reversing <code>x</code> causes the value to go outside the signed 32-bit integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then return <code>0</code>.</p>\n\n<p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 123\n<strong>Output:</strong> 321\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -123\n<strong>Output:</strong> -321\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 120\n<strong>Output:</strong> 21\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "123",
+                    "expectedOutput": "321",
+                    "isSample": true
+                },
+                {
+                    "input": "-123",
+                    "expectedOutput": "-321",
+                    "isSample": true
+                },
+                {
+                    "input": "120",
+                    "expectedOutput": "21",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/reverse-integer"
+    },
+    {
+        "id": 8,
+        "title": "String to Integer (atoi)",
+        "difficulty": "Medium",
+        "topics": [
+            "String"
+        ],
+        "description": "<p>Implement the <code>myAtoi(string s)</code> function, which converts a string to a 32-bit signed integer.</p>\n\n<p>The algorithm for <code>myAtoi(string s)</code> is as follows:</p>\n\n<ol>\n\t<li><strong>Whitespace</strong>: Ignore any leading whitespace (<code>&quot; &quot;</code>).</li>\n\t<li><strong>Signedness</strong>: Determine the sign by checking if the next character is <code>&#39;-&#39;</code> or <code>&#39;+&#39;</code>, assuming positivity if neither present.</li>\n\t<li><strong>Conversion</strong>: Read the integer by skipping leading zeros&nbsp;until a non-digit character is encountered or the end of the string is reached. If no digits were read, then the result is 0.</li>\n\t<li><strong>Rounding</strong>: If the integer is out of the 32-bit signed integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then round the integer to remain in the range. Specifically, integers less than <code>-2<sup>31</sup></code> should be rounded to <code>-2<sup>31</sup></code>, and integers greater than <code>2<sup>31</sup> - 1</code> should be rounded to <code>2<sup>31</sup> - 1</code>.</li>\n</ol>\n\n<p>Return the integer as the final result.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;42&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">42</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\nThe underlined characters are what is read in and the caret is the current reader position.\nStep 1: &quot;42&quot; (no characters read because there is no leading whitespace)\n         ^\nStep 2: &quot;42&quot; (no characters read because there is neither a &#39;-&#39; nor &#39;+&#39;)\n         ^\nStep 3: &quot;<u>42</u>&quot; (&quot;42&quot; is read in)\n           ^\n</pre>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot; -042&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">-42</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\nStep 1: &quot;<u>   </u>-042&quot; (leading whitespace is read and ignored)\n            ^\nStep 2: &quot;   <u>-</u>042&quot; (&#39;-&#39; is read, so the result should be negative)\n             ^\nStep 3: &quot;   -<u>042</u>&quot; (&quot;042&quot; is read in, leading zeros ignored in the result)\n               ^\n</pre>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;1337c0d3&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1337</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\nStep 1: &quot;1337c0d3&quot; (no characters read because there is no leading whitespace)\n         ^\nStep 2: &quot;1337c0d3&quot; (no characters read because there is neither a &#39;-&#39; nor &#39;+&#39;)\n         ^\nStep 3: &quot;<u>1337</u>c0d3&quot; (&quot;1337&quot; is read in; reading stops because the next character is a non-digit)\n             ^\n</pre>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;0-1&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">0</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\nStep 1: &quot;0-1&quot; (no characters read because there is no leading whitespace)\n         ^\nStep 2: &quot;0-1&quot; (no characters read because there is neither a &#39;-&#39; nor &#39;+&#39;)\n         ^\nStep 3: &quot;<u>0</u>-1&quot; (&quot;0&quot; is read in; reading stops because the next character is a non-digit)\n          ^\n</pre>\n</div>\n\n<p><strong class=\"example\">Example 5:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;words and 987&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">0</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>Reading stops at the first non-digit character &#39;w&#39;.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 200</code></li>\n\t<li><code>s</code> consists of English letters (lower-case and upper-case), digits (<code>0-9</code>), <code>&#39; &#39;</code>, <code>&#39;+&#39;</code>, <code>&#39;-&#39;</code>, and <code>&#39;.&#39;</code>.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/string-to-integer-(atoi)"
+    },
+    {
+        "id": 9,
+        "title": "Palindrome Number",
+        "difficulty": "Easy",
+        "topics": [
+            "Math"
+        ],
+        "description": "<p>Given an integer <code>x</code>, return <code>true</code><em> if </em><code>x</code><em> is a </em><span data-keyword=\"palindrome-integer\"><em><strong>palindrome</strong></em></span><em>, and </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 121\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 121 reads as 121 from left to right and from right to left.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -121\n<strong>Output:</strong> false\n<strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 10\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup>&nbsp;&lt;= x &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without converting the integer to a string?",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "121",
+                    "expectedOutput": "true",
+                    "isSample": true
+                },
+                {
+                    "input": "-121",
+                    "expectedOutput": "false",
+                    "isSample": true
+                },
+                {
+                    "input": "10",
+                    "expectedOutput": "false",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/palindrome-number"
+    },
+    {
+        "id": 10,
+        "title": "Regular Expression Matching",
+        "difficulty": "Hard",
+        "topics": [
+            "String",
+            "Dynamic Programming",
+            "Recursion"
+        ],
+        "description": "<p>Given an input string <code>s</code>&nbsp;and a pattern <code>p</code>, implement regular expression matching with support for <code>&#39;.&#39;</code> and <code>&#39;*&#39;</code> where:</p>\n\n<ul>\n\t<li><code>&#39;.&#39;</code> Matches any single character.​​​​</li>\n\t<li><code>&#39;*&#39;</code> Matches zero or more of the preceding element.</li>\n</ul>\n\n<p>Return a boolean indicating whether the matching covers the entire input string (not partial).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aa&quot;, p = &quot;a&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> &quot;a&quot; does not match the entire string &quot;aa&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aa&quot;, p = &quot;a*&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> &#39;*&#39; means zero or more of the preceding element, &#39;a&#39;. Therefore, by repeating &#39;a&#39; once, it becomes &quot;aa&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;ab&quot;, p = &quot;.*&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> &quot;.*&quot; means &quot;zero or more (*) of any character (.)&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length&nbsp;&lt;= 20</code></li>\n\t<li><code>1 &lt;= p.length&nbsp;&lt;= 20</code></li>\n\t<li><code>s</code> contains only lowercase English letters.</li>\n\t<li><code>p</code> contains only lowercase English letters, <code>&#39;.&#39;</code>, and&nbsp;<code>&#39;*&#39;</code>.</li>\n\t<li>It is guaranteed for each appearance of the character <code>&#39;*&#39;</code>, there will be a previous valid character to match.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "&quot;aa&quot;\n&quot;a&quot;",
+                    "expectedOutput": "false",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;aa&quot;\n&quot;a*&quot;",
+                    "expectedOutput": "true",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;ab&quot;\n&quot;.*&quot;",
+                    "expectedOutput": "true",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/regular-expression-matching"
+    },
+    {
+        "id": 11,
+        "title": "Container With Most Water",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Two Pointers",
+            "Greedy"
+        ],
+        "description": "<p>You are given an integer array <code>height</code> of length <code>n</code>. There are <code>n</code> vertical lines drawn such that the two endpoints of the <code>i<sup>th</sup></code> line are <code>(i, 0)</code> and <code>(i, height[i])</code>.</p>\n\n<p>Find two lines that together with the x-axis form a container, such that the container contains the most water.</p>\n\n<p>Return <em>the maximum amount of water a container can store</em>.</p>\n\n<p><strong>Notice</strong> that you may not slant the container.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg\" style=\"width: 600px; height: 287px;\" />\n<pre>\n<strong>Input:</strong> height = [1,8,6,2,5,4,8,3,7]\n<strong>Output:</strong> 49\n<strong>Explanation:</strong> The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> height = [1,1]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == height.length</code></li>\n\t<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= height[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[1,8,6,2,5,4,8,3,7]",
+                    "expectedOutput": "49",
+                    "isSample": true
+                },
+                {
+                    "input": "[1,1]",
+                    "expectedOutput": "1",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/container-with-most-water"
+    },
+    {
+        "id": 12,
+        "title": "Integer to Roman",
+        "difficulty": "Medium",
+        "topics": [
+            "Hash Table",
+            "Math",
+            "String"
+        ],
+        "description": "<p>Seven different symbols represent Roman numerals with the following values:</p>\n\n<table>\n\t<thead>\n\t\t<tr>\n\t\t\t<th>Symbol</th>\n\t\t\t<th>Value</th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>I</td>\n\t\t\t<td>1</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>V</td>\n\t\t\t<td>5</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>X</td>\n\t\t\t<td>10</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>L</td>\n\t\t\t<td>50</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C</td>\n\t\t\t<td>100</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>D</td>\n\t\t\t<td>500</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>M</td>\n\t\t\t<td>1000</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>Roman numerals are formed by appending&nbsp;the conversions of&nbsp;decimal place values&nbsp;from highest to lowest. Converting a decimal place value into a Roman numeral has the following rules:</p>\n\n<ul>\n\t<li>If the value does not start with 4 or&nbsp;9, select the symbol of the maximal value that can be subtracted from the input, append that symbol to the result, subtract its value, and convert the remainder to a Roman numeral.</li>\n\t<li>If the value starts with 4 or 9 use the&nbsp;<strong>subtractive form</strong>&nbsp;representing&nbsp;one symbol subtracted from the following symbol, for example,&nbsp;4 is 1 (<code>I</code>) less than 5 (<code>V</code>): <code>IV</code>&nbsp;and 9 is 1 (<code>I</code>) less than 10 (<code>X</code>): <code>IX</code>.&nbsp;Only the following subtractive forms are used: 4 (<code>IV</code>), 9 (<code>IX</code>),&nbsp;40 (<code>XL</code>), 90 (<code>XC</code>), 400 (<code>CD</code>) and 900 (<code>CM</code>).</li>\n\t<li>Only powers of 10 (<code>I</code>, <code>X</code>, <code>C</code>, <code>M</code>) can be appended consecutively at most 3 times to represent multiples of 10. You cannot append 5&nbsp;(<code>V</code>), 50 (<code>L</code>), or 500 (<code>D</code>) multiple times. If you need to append a symbol&nbsp;4 times&nbsp;use the <strong>subtractive form</strong>.</li>\n</ul>\n\n<p>Given an integer, convert it to a Roman numeral.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">num = 3749</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;MMMDCCXLIX&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\n3000 = MMM as 1000 (M) + 1000 (M) + 1000 (M)\n 700 = DCC as 500 (D) + 100 (C) + 100 (C)\n  40 = XL as 10 (X) less of 50 (L)\n   9 = IX as 1 (I) less of 10 (X)\nNote: 49 is not 1 (I) less of 50 (L) because the conversion is based on decimal places\n</pre>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">num = 58</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;LVIII&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\n50 = L\n 8 = VIII\n</pre>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">num = 1994</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;MCMXCIV&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\n1000 = M\n 900 = CM\n  90 = XC\n   4 = IV\n</pre>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= num &lt;= 3999</code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/integer-to-roman"
+    },
+    {
+        "id": 13,
+        "title": "Roman to Integer",
+        "difficulty": "Easy",
+        "topics": [
+            "Hash Table",
+            "Math",
+            "String"
+        ],
+        "description": "<p>Roman numerals are represented by seven different symbols:&nbsp;<code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>\n\n<pre>\n<strong>Symbol</strong>       <strong>Value</strong>\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000</pre>\n\n<p>For example,&nbsp;<code>2</code> is written as <code>II</code>&nbsp;in Roman numeral, just two ones added together. <code>12</code> is written as&nbsp;<code>XII</code>, which is simply <code>X + II</code>. The number <code>27</code> is written as <code>XXVII</code>, which is <code>XX + V + II</code>.</p>\n\n<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>\n\n<ul>\n\t<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9.&nbsp;</li>\n\t<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90.&nbsp;</li>\n\t<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>\n</ul>\n\n<p>Given a roman numeral, convert it to an integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;III&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> III = 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;LVIII&quot;\n<strong>Output:</strong> 58\n<strong>Explanation:</strong> L = 50, V= 5, III = 3.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;MCMXCIV&quot;\n<strong>Output:</strong> 1994\n<strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 15</code></li>\n\t<li><code>s</code> contains only&nbsp;the characters <code>(&#39;I&#39;, &#39;V&#39;, &#39;X&#39;, &#39;L&#39;, &#39;C&#39;, &#39;D&#39;, &#39;M&#39;)</code>.</li>\n\t<li>It is <strong>guaranteed</strong>&nbsp;that <code>s</code> is a valid roman numeral in the range <code>[1, 3999]</code>.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "&quot;III&quot;",
+                    "expectedOutput": "3",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;LVIII&quot;",
+                    "expectedOutput": "58",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;MCMXCIV&quot;",
+                    "expectedOutput": "1994",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/roman-to-integer"
+    },
+    {
+        "id": 14,
+        "title": "Longest Common Prefix",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "String",
+            "Trie"
+        ],
+        "description": "<p>Write a function to find the longest common prefix string amongst an array of strings.</p>\n\n<p>If there is no common prefix, return an empty string <code>&quot;&quot;</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]\n<strong>Output:</strong> &quot;fl&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]\n<strong>Output:</strong> &quot;&quot;\n<strong>Explanation:</strong> There is no common prefix among the input strings.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= strs.length &lt;= 200</code></li>\n\t<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>\n\t<li><code>strs[i]</code> consists of only lowercase English letters if it is non-empty.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]",
+                    "expectedOutput": "&quot;fl&quot;",
+                    "isSample": true
+                },
+                {
+                    "input": "[&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]",
+                    "expectedOutput": "&quot;&quot;",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/longest-common-prefix"
+    },
+    {
+        "id": 15,
+        "title": "3Sum",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Two Pointers",
+            "Sorting"
+        ],
+        "description": "<p>Given an integer array nums, return all the triplets <code>[nums[i], nums[j], nums[k]]</code> such that <code>i != j</code>, <code>i != k</code>, and <code>j != k</code>, and <code>nums[i] + nums[j] + nums[k] == 0</code>.</p>\n\n<p>Notice that the solution set must not contain duplicate triplets.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,0,1,2,-1,-4]\n<strong>Output:</strong> [[-1,-1,2],[-1,0,1]]\n<strong>Explanation:</strong> \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,1]\n<strong>Output:</strong> []\n<strong>Explanation:</strong> The only possible triplet does not sum up to 0.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,0]\n<strong>Output:</strong> [[0,0,0]]\n<strong>Explanation:</strong> The only possible triplet sums up to 0.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>3 &lt;= nums.length &lt;= 3000</code></li>\n\t<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[-1,0,1,2,-1,-4]",
+                    "expectedOutput": "[[-1,-1,2],[-1,0,1]]",
+                    "isSample": true
+                },
+                {
+                    "input": "[0,1,1]",
+                    "expectedOutput": "[]",
+                    "isSample": true
+                },
+                {
+                    "input": "[0,0,0]",
+                    "expectedOutput": "[[0,0,0]]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/3sum"
+    },
+    {
+        "id": 16,
+        "title": "3Sum Closest",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Two Pointers",
+            "Sorting"
+        ],
+        "description": "<p>Given an integer array <code>nums</code> of length <code>n</code> and an integer <code>target</code>, find three integers at <strong>distinct indices</strong> in <code>nums</code> such that the sum is closest to <code>target</code>.</p>\n\n<p>Return <em>the sum of the three integers</em>.</p>\n\n<p>You may assume that each input would have exactly one solution.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,2,1,-4], target = 1\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,0], target = 1\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The sum that is closest to the target is 0. (0 + 0 + 0 = 0).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>3 &lt;= nums.length &lt;= 500</code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[-1,2,1,-4]\n1",
+                    "expectedOutput": "2",
+                    "isSample": true
+                },
+                {
+                    "input": "[0,0,0]\n1",
+                    "expectedOutput": "0",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/3sum-closest"
+    },
+    {
+        "id": 17,
+        "title": "Letter Combinations of a Phone Number",
+        "difficulty": "Medium",
+        "topics": [
+            "Hash Table",
+            "String",
+            "Backtracking"
+        ],
+        "description": "<p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent. Return the answer in <strong>any order</strong>.</p>\n\n<p>A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png\" style=\"width: 300px; height: 243px;\" />\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = &quot;23&quot;\n<strong>Output:</strong> [&quot;ad&quot;,&quot;ae&quot;,&quot;af&quot;,&quot;bd&quot;,&quot;be&quot;,&quot;bf&quot;,&quot;cd&quot;,&quot;ce&quot;,&quot;cf&quot;]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = &quot;2&quot;\n<strong>Output:</strong> [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= digits.length &lt;= 4</code></li>\n\t<li><code>digits[i]</code> is a digit in the range <code>[&#39;2&#39;, &#39;9&#39;]</code>.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "&quot;23&quot;",
+                    "expectedOutput": "[&quot;ad&quot;,&quot;ae&quot;,&quot;af&quot;,&quot;bd&quot;,&quot;be&quot;,&quot;bf&quot;,&quot;cd&quot;,&quot;ce&quot;,&quot;cf&quot;]",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;2&quot;",
+                    "expectedOutput": "[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number"
+    },
+    {
+        "id": 18,
+        "title": "4Sum",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Two Pointers",
+            "Sorting"
+        ],
+        "description": "<p>Given an array <code>nums</code> of <code>n</code> integers, return <em>an array of all the <strong>unique</strong> quadruplets</em> <code>[nums[a], nums[b], nums[c], nums[d]]</code> such that:</p>\n\n<ul>\n\t<li><code>0 &lt;= a, b, c, d&nbsp;&lt; n</code></li>\n\t<li><code>a</code>, <code>b</code>, <code>c</code>, and <code>d</code> are <strong>distinct</strong>.</li>\n\t<li><code>nums[a] + nums[b] + nums[c] + nums[d] == target</code></li>\n</ul>\n\n<p>You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,0,-1,0,-2,2], target = 0\n<strong>Output:</strong> [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,2,2,2,2], target = 8\n<strong>Output:</strong> [[2,2,2,2]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 200</code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[1,0,-1,0,-2,2]\n0",
+                    "expectedOutput": "[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]",
+                    "isSample": true
+                },
+                {
+                    "input": "[2,2,2,2,2]\n8",
+                    "expectedOutput": "[[2,2,2,2]]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/4sum"
+    },
+    {
+        "id": 19,
+        "title": "Remove Nth Node From End of List",
+        "difficulty": "Medium",
+        "topics": [
+            "Linked List",
+            "Two Pointers"
+        ],
+        "description": "<p>Given the <code>head</code> of a linked list, remove the <code>n<sup>th</sup></code> node from the end of the list and return its head.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/remove_ex1.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5], n = 2\n<strong>Output:</strong> [1,2,3,5]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = [1], n = 1\n<strong>Output:</strong> []\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = [1,2], n = 1\n<strong>Output:</strong> [1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is <code>sz</code>.</li>\n\t<li><code>1 &lt;= sz &lt;= 30</code></li>\n\t<li><code>0 &lt;= Node.val &lt;= 100</code></li>\n\t<li><code>1 &lt;= n &lt;= sz</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you do this in one pass?</p>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[1,2,3,4,5]\n2",
+                    "expectedOutput": "[1,2,3,5]",
+                    "isSample": true
+                },
+                {
+                    "input": "[1]\n1",
+                    "expectedOutput": "[]",
+                    "isSample": true
+                },
+                {
+                    "input": "[1,2]\n1",
+                    "expectedOutput": "[1]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list"
+    },
+    {
+        "id": 20,
+        "title": "Valid Parentheses",
+        "difficulty": "Easy",
+        "topics": [
+            "String",
+            "Stack"
+        ],
+        "description": "<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>\n\n<p>An input string is valid if:</p>\n\n<ol>\n\t<li>Open brackets must be closed by the same type of brackets.</li>\n\t<li>Open brackets must be closed in the correct order.</li>\n\t<li>Every close bracket has a corresponding open bracket of the same type.</li>\n</ol>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()[]{}&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;(]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([])&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 5:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([)]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/valid-parentheses"
+    },
+    {
+        "id": 21,
+        "title": "Merge Two Sorted Lists",
+        "difficulty": "Easy",
+        "topics": [
+            "Linked List",
+            "Recursion"
+        ],
+        "description": "<p>You are given the heads of two sorted linked lists <code>list1</code> and <code>list2</code>.</p>\n\n<p>Merge the two lists into one <strong>sorted</strong> list. The list should be made by splicing together the nodes of the first two lists.</p>\n\n<p>Return <em>the head of the merged linked list</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg\" style=\"width: 662px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> list1 = [1,2,4], list2 = [1,3,4]\n<strong>Output:</strong> [1,1,2,3,4,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> list1 = [], list2 = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> list1 = [], list2 = [0]\n<strong>Output:</strong> [0]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in both lists is in the range <code>[0, 50]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n\t<li>Both <code>list1</code> and <code>list2</code> are sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[1,2,4]\n[1,3,4]",
+                    "expectedOutput": "[1,1,2,3,4,4]",
+                    "isSample": true
+                },
+                {
+                    "input": "[]\n[]",
+                    "expectedOutput": "[]",
+                    "isSample": true
+                },
+                {
+                    "input": "[]\n[0]",
+                    "expectedOutput": "[0]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/merge-two-sorted-lists"
+    },
+    {
+        "id": 22,
+        "title": "Generate Parentheses",
+        "difficulty": "Medium",
+        "topics": [
+            "String",
+            "Dynamic Programming",
+            "Backtracking"
+        ],
+        "description": "<p>Given <code>n</code> pairs of parentheses, write a function to <em>generate all combinations of well-formed parentheses</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> n = 3\n<strong>Output:</strong> [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> n = 1\n<strong>Output:</strong> [\"()\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 8</code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "3",
+                    "expectedOutput": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+                    "isSample": true
+                },
+                {
+                    "input": "1",
+                    "expectedOutput": "[\"()\"]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/generate-parentheses"
+    },
+    {
+        "id": 23,
+        "title": "Merge k Sorted Lists",
+        "difficulty": "Hard",
+        "topics": [
+            "Linked List",
+            "Divide and Conquer",
+            "Heap (Priority Queue)",
+            "Merge Sort"
+        ],
+        "description": "<p>You are given an array of <code>k</code> linked-lists <code>lists</code>, each linked-list is sorted in ascending order.</p>\n\n<p><em>Merge all the linked-lists into one sorted linked-list and return it.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> lists = [[1,4,5],[1,3,4],[2,6]]\n<strong>Output:</strong> [1,1,2,3,4,4,5,6]\n<strong>Explanation:</strong> The linked-lists are:\n[\n  1-&gt;4-&gt;5,\n  1-&gt;3-&gt;4,\n  2-&gt;6\n]\nmerging them into one sorted linked list:\n1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> lists = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> lists = [[]]\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>k == lists.length</code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= lists[i].length &lt;= 500</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= lists[i][j] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>lists[i]</code> is sorted in <strong>ascending order</strong>.</li>\n\t<li>The sum of <code>lists[i].length</code> will not exceed <code>10<sup>4</sup></code>.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[[1,4,5],[1,3,4],[2,6]]",
+                    "expectedOutput": "[1,1,2,3,4,4,5,6]",
+                    "isSample": true
+                },
+                {
+                    "input": "[]",
+                    "expectedOutput": "[]",
+                    "isSample": true
+                },
+                {
+                    "input": "[[]]",
+                    "expectedOutput": "[]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/merge-k-sorted-lists"
+    },
+    {
+        "id": 24,
+        "title": "Swap Nodes in Pairs",
+        "difficulty": "Medium",
+        "topics": [
+            "Linked List",
+            "Recursion"
+        ],
+        "description": "<p>Given a&nbsp;linked list, swap every two adjacent nodes and return its head. You must solve the problem without&nbsp;modifying the values in the list&#39;s nodes (i.e., only nodes themselves may be changed.)</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">head = [1,2,3,4]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[2,1,4,3]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg\" style=\"width: 422px; height: 222px;\" /></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">head = []</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">head = [1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">head = [1,2,3]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[2,1,3]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the&nbsp;list&nbsp;is in the range <code>[0, 100]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/swap-nodes-in-pairs"
+    },
+    {
+        "id": 25,
+        "title": "Reverse Nodes in k-Group",
+        "difficulty": "Hard",
+        "topics": [
+            "Linked List",
+            "Recursion"
+        ],
+        "description": "<p>Given the <code>head</code> of a linked list, reverse the nodes of the list <code>k</code> at a time, and return <em>the modified list</em>.</p>\n\n<p><code>k</code> is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of <code>k</code> then left-out nodes, in the end, should remain as it is.</p>\n\n<p>You may not alter the values in the list&#39;s nodes, only nodes themselves may be changed.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/reverse_ex1.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5], k = 2\n<strong>Output:</strong> [2,1,4,3,5]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/reverse_ex2.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5], k = 3\n<strong>Output:</strong> [3,2,1,4,5]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is <code>n</code>.</li>\n\t<li><code>1 &lt;= k &lt;= n &lt;= 5000</code></li>\n\t<li><code>0 &lt;= Node.val &lt;= 1000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow-up:</strong> Can you solve the problem in <code>O(1)</code> extra memory space?</p>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[1,2,3,4,5]\n2",
+                    "expectedOutput": "[2,1,4,3,5]",
+                    "isSample": true
+                },
+                {
+                    "input": "[1,2,3,4,5]\n3",
+                    "expectedOutput": "[3,2,1,4,5]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/reverse-nodes-in-k-group"
+    },
+    {
+        "id": 26,
+        "title": "Remove Duplicates from Sorted Array",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "Two Pointers"
+        ],
+        "description": "<p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing order</strong>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that each unique element appears only <strong>once</strong>. The <strong>relative order</strong> of the elements should be kept the <strong>same</strong>.</p>\n\n<p>Consider the number of <em>unique elements</em> in&nbsp;<code>nums</code> to be <code>k<strong>​​​​​​​</strong></code>​​​​​​​. <meta charset=\"UTF-8\" />After removing duplicates, return the number of unique elements&nbsp;<code>k</code>.</p>\n\n<p><meta charset=\"UTF-8\" />The first&nbsp;<code>k</code>&nbsp;elements of&nbsp;<code>nums</code>&nbsp;should contain the unique numbers in <strong>sorted order</strong>. The remaining elements beyond index&nbsp;<code>k - 1</code>&nbsp;can be ignored.</p>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i &lt; k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2]\n<strong>Output:</strong> 2, nums = [1,2,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,1,1,1,2,2,3,3,4]\n<strong>Output:</strong> 5, nums = [0,1,2,3,4,_,_,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n\t<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[1,1,2]",
+                    "expectedOutput": "2, nums = [1,2,_]",
+                    "isSample": true
+                },
+                {
+                    "input": "[0,0,1,1,1,2,2,3,3,4]",
+                    "expectedOutput": "5, nums = [0,1,2,3,4,_,_,_,_,_]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array"
+    },
+    {
+        "id": 27,
+        "title": "Remove Element",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "Two Pointers"
+        ],
+        "description": "<p>Given an integer array <code>nums</code> and an integer <code>val</code>, remove all occurrences of <code>val</code> in <code>nums</code> <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a>. The order of the elements may be changed. Then return <em>the number of elements in </em><code>nums</code><em> which are not equal to </em><code>val</code>.</p>\n\n<p>Consider the number of elements in <code>nums</code> which are not equal to <code>val</code> be <code>k</code>, to get accepted, you need to do the following things:</p>\n\n<ul>\n\t<li>Change the array <code>nums</code> such that the first <code>k</code> elements of <code>nums</code> contain the elements which are not equal to <code>val</code>. The remaining elements of <code>nums</code> are not important as well as the size of <code>nums</code>.</li>\n\t<li>Return <code>k</code>.</li>\n</ul>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i &lt; actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,2,3], val = 3\n<strong>Output:</strong> 2, nums = [2,2,_,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,2,2,3,0,4,2], val = 2\n<strong>Output:</strong> 5, nums = [0,1,4,0,3,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 50</code></li>\n\t<li><code>0 &lt;= val &lt;= 100</code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "[3,2,2,3]\n3",
+                    "expectedOutput": "2, nums = [2,2,_,_]",
+                    "isSample": true
+                },
+                {
+                    "input": "[0,1,2,2,3,0,4,2]\n2",
+                    "expectedOutput": "5, nums = [0,1,4,0,3,_,_,_]",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/remove-element"
+    },
+    {
+        "id": 28,
+        "title": "Find the Index of the First Occurrence in a String",
+        "difficulty": "Easy",
+        "topics": [
+            "Two Pointers",
+            "String",
+            "String Matching"
+        ],
+        "description": "<p>Given two strings <code>needle</code> and <code>haystack</code>, return the index of the first occurrence of <code>needle</code> in <code>haystack</code>, or <code>-1</code> if <code>needle</code> is not part of <code>haystack</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;sadbutsad&quot;, needle = &quot;sad&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> &quot;sad&quot; occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;leetcode&quot;, needle = &quot;leeto&quot;\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> &quot;leeto&quot; did not occur in &quot;leetcode&quot;, so we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= haystack.length, needle.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>haystack</code> and <code>needle</code> consist of only lowercase English characters.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "&quot;sadbutsad&quot;\n&quot;sad&quot;",
+                    "expectedOutput": "0",
+                    "isSample": true
+                },
+                {
+                    "input": "&quot;leetcode&quot;\n&quot;leeto&quot;",
+                    "expectedOutput": "-1",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string"
+    },
+    {
+        "id": 29,
+        "title": "Divide Two Integers",
+        "difficulty": "Medium",
+        "topics": [
+            "Math",
+            "Bit Manipulation"
+        ],
+        "description": "<p>Given two integers <code>dividend</code> and <code>divisor</code>, divide two integers <strong>without</strong> using multiplication, division, and mod operator.</p>\n\n<p>The integer division should truncate toward zero, which means losing its fractional part. For example, <code>8.345</code> would be truncated to <code>8</code>, and <code>-2.7335</code> would be truncated to <code>-2</code>.</p>\n\n<p>Return <em>the <strong>quotient</strong> after dividing </em><code>dividend</code><em> by </em><code>divisor</code>.</p>\n\n<p><strong>Note: </strong>Assume we are dealing with an environment that could only store integers within the <strong>32-bit</strong> signed integer range: <code>[&minus;2<sup>31</sup>, 2<sup>31</sup> &minus; 1]</code>. For this problem, if the quotient is <strong>strictly greater than</strong> <code>2<sup>31</sup> - 1</code>, then return <code>2<sup>31</sup> - 1</code>, and if the quotient is <strong>strictly less than</strong> <code>-2<sup>31</sup></code>, then return <code>-2<sup>31</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> dividend = 10, divisor = 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> 10/3 = 3.33333.. which is truncated to 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> dividend = 7, divisor = -3\n<strong>Output:</strong> -2\n<strong>Explanation:</strong> 7/-3 = -2.33333.. which is truncated to -2.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= dividend, divisor &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>divisor != 0</code></li>\n</ul>\n",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "10\n3",
+                    "expectedOutput": "3",
+                    "isSample": true
+                },
+                {
+                    "input": "7\n-3",
+                    "expectedOutput": "-2",
+                    "isSample": true
+                }
+            ],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/divide-two-integers"
+    },
+    {
+        "id": 30,
+        "title": "Substring with Concatenation of All Words",
+        "difficulty": "Hard",
+        "topics": [
+            "Hash Table",
+            "String",
+            "Sliding Window"
+        ],
+        "description": "<p>You are given a string <code>s</code> and an array of strings <code>words</code>. All the strings of <code>words</code> are of <strong>the same length</strong>.</p>\n\n<p>A <strong>concatenated string</strong> is a string that exactly contains all the strings of any permutation of <code>words</code> concatenated.</p>\n\n<ul>\n\t<li>For example, if <code>words = [&quot;ab&quot;,&quot;cd&quot;,&quot;ef&quot;]</code>, then <code>&quot;abcdef&quot;</code>, <code>&quot;abefcd&quot;</code>, <code>&quot;cdabef&quot;</code>, <code>&quot;cdefab&quot;</code>, <code>&quot;efabcd&quot;</code>, and <code>&quot;efcdab&quot;</code> are all concatenated strings. <code>&quot;acdbef&quot;</code> is not a concatenated string because it is not the concatenation of any permutation of <code>words</code>.</li>\n</ul>\n\n<p>Return an array of <em>the starting indices</em> of all the concatenated substrings in <code>s</code>. You can return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;barfoothefoobarman&quot;, words = [&quot;foo&quot;,&quot;bar&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[0,9]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The substring starting at 0 is <code>&quot;barfoo&quot;</code>. It is the concatenation of <code>[&quot;bar&quot;,&quot;foo&quot;]</code> which is a permutation of <code>words</code>.<br />\nThe substring starting at 9 is <code>&quot;foobar&quot;</code>. It is the concatenation of <code>[&quot;foo&quot;,&quot;bar&quot;]</code> which is a permutation of <code>words</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;wordgoodgoodgoodbestword&quot;, words = [&quot;word&quot;,&quot;good&quot;,&quot;best&quot;,&quot;word&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>There is no concatenated substring.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;barfoofoobarthefoobarman&quot;, words = [&quot;bar&quot;,&quot;foo&quot;,&quot;the&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[6,9,12]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The substring starting at 6 is <code>&quot;foobarthe&quot;</code>. It is the concatenation of <code>[&quot;foo&quot;,&quot;bar&quot;,&quot;the&quot;]</code>.<br />\nThe substring starting at 9 is <code>&quot;barthefoo&quot;</code>. It is the concatenation of <code>[&quot;bar&quot;,&quot;the&quot;,&quot;foo&quot;]</code>.<br />\nThe substring starting at 12 is <code>&quot;thefoobar&quot;</code>. It is the concatenation of <code>[&quot;the&quot;,&quot;foo&quot;,&quot;bar&quot;]</code>.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= words.length &lt;= 5000</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 30</code></li>\n\t<li><code>s</code> and <code>words[i]</code> consist of lowercase English letters.</li>\n</ul>\n",
+        "testCases": {
+            "sample": [],
+            "hidden": []
+        },
+        "source": "LeetCode",
+        "url": "https://leetcode.com/problems/substring-with-concatenation-of-all-words"
+    },
+    {
+        "id": "2210B",
+        "source": "Codeforces",
+        "url": "https://codeforces.com/contest/2210/problem/B",
+        "title": "Simply Sitting on Chairs",
+        "difficulty": "Unrated",
+        "topics": [
+            "Codeforces"
+        ],
+        "description": "<p>  </p><p>There are <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-1\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-2\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-1-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-1\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-2\"><span class=\"mi\" id=\"MathJax-Span-3\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-1\">n</script> chairs in a row, initially all unmarked.</p><p>You are given a permutation <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-3\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-4\">p</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-2-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-4\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-5\"><span class=\"mi\" id=\"MathJax-Span-6\" style=\"font-family: MathJax_Math-italic;\">p</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-2\">p</script><span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-5\"><span class=\"MJXp-msubsup\" id=\"MJXp-Span-6\"><span class=\"MJXp-mi\" id=\"MJXp-Span-7\" style=\"margin-right: 0.05em;\"></span><span class=\"MJXp-mrow MJXp-script\" id=\"MJXp-Span-8\" style=\"vertical-align: 0.5em;\"><span class=\"MJXp-mtext\" id=\"MJXp-Span-9\">∗</span></span></span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-3-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-7\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-8\"><span class=\"msubsup\" id=\"MathJax-Span-9\"><span style=\"display: inline-block; position: relative; width: 0.42em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.812em, 1000em, 4.17em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mi\" id=\"MathJax-Span-10\"></span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -4.342em; left: 0em;\"><span class=\"texatom\" id=\"MathJax-Span-11\"><span class=\"mrow\" id=\"MathJax-Span-12\"><span class=\"mtext\" id=\"MathJax-Span-13\" style=\"font-size: 70.7%; font-family: MathJax_Main;\">∗</span></span></span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-3\">^{\\text{∗}}</script> of length <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-10\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-11\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-4-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-14\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-15\"><span class=\"mi\" id=\"MathJax-Span-16\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-4\">n</script>.</p><p>Now, you play a game. You visit each chair sequentially, starting from the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-12\"><span class=\"MJXp-mn\" id=\"MJXp-Span-13\">1</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-5-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-17\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-18\"><span class=\"mn\" id=\"MathJax-Span-19\" style=\"font-family: MathJax_Main;\">1</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-5\">1</script>-st chair. At the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-14\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-15\">i</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-6-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-20\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-21\"><span class=\"mi\" id=\"MathJax-Span-22\" style=\"font-family: MathJax_Math-italic;\">i</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-6\">i</script>-th chair, you can do the following: </p><ul> <li> If the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-16\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-17\">i</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-7-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-23\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-24\"><span class=\"mi\" id=\"MathJax-Span-25\" style=\"font-family: MathJax_Math-italic;\">i</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-7\">i</script>-th chair is already marked, then you end the game immediately without sitting on it. </li><li> Otherwise, you can choose to sit on the chair or skip it and move to the next chair. </li><li> If you choose to sit on the chair, then after standing up, you mark the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-18\"><span class=\"MJXp-msubsup\" id=\"MJXp-Span-19\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-20\" style=\"margin-right: 0.05em;\">p</span><span class=\"MJXp-mi MJXp-italic MJXp-script\" id=\"MJXp-Span-21\" style=\"vertical-align: -0.4em;\">i</span></span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-8-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-26\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-27\"><span class=\"msubsup\" id=\"MathJax-Span-28\"><span style=\"display: inline-block; position: relative; width: 0.836em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.396em, 1000.48em, 4.348em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mi\" id=\"MathJax-Span-29\" style=\"font-family: MathJax_Math-italic;\">p</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -3.807em; left: 0.479em;\"><span class=\"mi\" id=\"MathJax-Span-30\" style=\"font-size: 70.7%; font-family: MathJax_Math-italic;\">i</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-8\">p_i</script>-th chair and move to the next chair. </li></ul> If all the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-22\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-23\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-9-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-31\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-32\"><span class=\"mi\" id=\"MathJax-Span-33\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-9\">n</script> chairs are visited, the game ends.<p>Your task is to determine the maximum number of chairs that you can sit on.</p><div class=\"statement-footnote\"><p><span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-24\"><span class=\"MJXp-msubsup\" id=\"MJXp-Span-25\"><span class=\"MJXp-mi\" id=\"MJXp-Span-26\" style=\"margin-right: 0.05em;\"></span><span class=\"MJXp-mrow MJXp-script\" id=\"MJXp-Span-27\" style=\"vertical-align: 0.5em;\"><span class=\"MJXp-mtext\" id=\"MJXp-Span-28\">∗</span></span></span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-10-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-34\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-35\"><span class=\"msubsup\" id=\"MathJax-Span-36\"><span style=\"display: inline-block; position: relative; width: 0.424em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.785em, 1000em, 4.205em, -999.996em); top: -3.988em; left: 0em;\"><span class=\"mi\" id=\"MathJax-Span-37\"></span><span style=\"display: inline-block; width: 0px; height: 3.995em;\"></span></span><span style=\"position: absolute; top: -4.338em; left: 0em;\"><span class=\"texatom\" id=\"MathJax-Span-38\"><span class=\"mrow\" id=\"MathJax-Span-39\"><span class=\"mtext\" id=\"MathJax-Span-40\" style=\"font-size: 70.7%; font-family: MathJax_Main;\">∗</span></span></span><span style=\"display: inline-block; width: 0px; height: 3.995em;\"></span></span></span></span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-10\">^{\\text{∗}}</script>A permutation of length <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-29\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-30\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-11-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-41\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-42\"><span class=\"mi\" id=\"MathJax-Span-43\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-11\">n</script> is an array consisting of <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-31\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-32\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-12-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-44\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-45\"><span class=\"mi\" id=\"MathJax-Span-46\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-12\">n</script> distinct integers from <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-33\"><span class=\"MJXp-mn\" id=\"MJXp-Span-34\">1</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-13-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-47\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-48\"><span class=\"mn\" id=\"MathJax-Span-49\" style=\"font-family: MathJax_Main;\">1</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-13\">1</script> to <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-35\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-36\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-14-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-50\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-51\"><span class=\"mi\" id=\"MathJax-Span-52\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-14\">n</script> in arbitrary order. For example, <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-37\"><span class=\"MJXp-mo\" id=\"MJXp-Span-38\" style=\"margin-left: 0em; margin-right: 0em;\">[</span><span class=\"MJXp-mn\" id=\"MJXp-Span-39\">2</span><span class=\"MJXp-mo\" id=\"MJXp-Span-40\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-41\">3</span><span class=\"MJXp-mo\" id=\"MJXp-Span-42\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-43\">1</span><span class=\"MJXp-mo\" id=\"MJXp-Span-44\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-45\">5</span><span class=\"MJXp-mo\" id=\"MJXp-Span-46\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-47\">4</span><span class=\"MJXp-mo\" id=\"MJXp-Span-48\" style=\"margin-left: 0em; margin-right: 0em;\">]</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-15-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-53\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-54\"><span class=\"mo\" id=\"MathJax-Span-55\" style=\"font-family: MathJax_Main;\">[</span><span class=\"mn\" id=\"MathJax-Span-56\" style=\"font-family: MathJax_Main;\">2</span><span class=\"mo\" id=\"MathJax-Span-57\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-58\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">3</span><span class=\"mo\" id=\"MathJax-Span-59\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-60\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">1</span><span class=\"mo\" id=\"MathJax-Span-61\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-62\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">5</span><span class=\"mo\" id=\"MathJax-Span-63\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-64\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">4</span><span class=\"mo\" id=\"MathJax-Span-65\" style=\"font-family: MathJax_Main;\">]</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-15\">[2,3,1,5,4]</script> is a permutation, but <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-49\"><span class=\"MJXp-mo\" id=\"MJXp-Span-50\" style=\"margin-left: 0em; margin-right: 0em;\">[</span><span class=\"MJXp-mn\" id=\"MJXp-Span-51\">1</span><span class=\"MJXp-mo\" id=\"MJXp-Span-52\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-53\">2</span><span class=\"MJXp-mo\" id=\"MJXp-Span-54\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-55\">2</span><span class=\"MJXp-mo\" id=\"MJXp-Span-56\" style=\"margin-left: 0em; margin-right: 0em;\">]</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-16-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-66\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-67\"><span class=\"mo\" id=\"MathJax-Span-68\" style=\"font-family: MathJax_Main;\">[</span><span class=\"mn\" id=\"MathJax-Span-69\" style=\"font-family: MathJax_Main;\">1</span><span class=\"mo\" id=\"MathJax-Span-70\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-71\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">2</span><span class=\"mo\" id=\"MathJax-Span-72\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-73\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">2</span><span class=\"mo\" id=\"MathJax-Span-74\" style=\"font-family: MathJax_Main;\">]</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-16\">[1,2,2]</script> is not a permutation (<span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-57\"><span class=\"MJXp-mn\" id=\"MJXp-Span-58\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-17-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-75\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-76\"><span class=\"mn\" id=\"MathJax-Span-77\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-17\">2</script> appears twice in the array), and <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-59\"><span class=\"MJXp-mo\" id=\"MJXp-Span-60\" style=\"margin-left: 0em; margin-right: 0em;\">[</span><span class=\"MJXp-mn\" id=\"MJXp-Span-61\">1</span><span class=\"MJXp-mo\" id=\"MJXp-Span-62\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-63\">3</span><span class=\"MJXp-mo\" id=\"MJXp-Span-64\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mn\" id=\"MJXp-Span-65\">4</span><span class=\"MJXp-mo\" id=\"MJXp-Span-66\" style=\"margin-left: 0em; margin-right: 0em;\">]</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-18-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-78\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-79\"><span class=\"mo\" id=\"MathJax-Span-80\" style=\"font-family: MathJax_Main;\">[</span><span class=\"mn\" id=\"MathJax-Span-81\" style=\"font-family: MathJax_Main;\">1</span><span class=\"mo\" id=\"MathJax-Span-82\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-83\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">3</span><span class=\"mo\" id=\"MathJax-Span-84\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mn\" id=\"MathJax-Span-85\" style=\"font-family: MathJax_Main; padding-left: 0.144em;\">4</span><span class=\"mo\" id=\"MathJax-Span-86\" style=\"font-family: MathJax_Main;\">]</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-18\">[1,3,4]</script> is also not a permutation (<span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-67\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-68\">n</span><span class=\"MJXp-mo\" id=\"MJXp-Span-69\" style=\"margin-left: 0.333em; margin-right: 0.333em;\">=</span><span class=\"MJXp-mn\" id=\"MJXp-Span-70\">3</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-19-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-87\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-88\"><span class=\"mi\" id=\"MathJax-Span-89\" style=\"font-family: MathJax_Math-italic;\">n</span><span class=\"mo\" id=\"MathJax-Span-90\" style=\"font-family: MathJax_Main; padding-left: 0.284em;\">=</span><span class=\"mn\" id=\"MathJax-Span-91\" style=\"font-family: MathJax_Main; padding-left: 0.284em;\">3</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-19\">n=3</script> but there is <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-71\"><span class=\"MJXp-mn\" id=\"MJXp-Span-72\">4</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-20-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-92\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-93\"><span class=\"mn\" id=\"MathJax-Span-94\" style=\"font-family: MathJax_Main;\">4</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-20\">4</script> in the array). </p></div><br><br><div class=\"section-title\">Input</div><p>Each test contains multiple test cases. The first line contains the number of test cases <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-73\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-74\">t</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-21-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-95\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-96\"><span class=\"mi\" id=\"MathJax-Span-97\" style=\"font-family: MathJax_Math-italic;\">t</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-21\">t</script> (<span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-75\"><span class=\"MJXp-mn\" id=\"MJXp-Span-76\">1</span><span class=\"MJXp-mo\" id=\"MJXp-Span-77\" style=\"margin-left: 0.333em; margin-right: 0.333em;\">≤</span><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-78\">t</span><span class=\"MJXp-mo\" id=\"MJXp-Span-79\" style=\"margin-left: 0.333em; margin-right: 0.333em;\">≤</span><span class=\"MJXp-msubsup\" id=\"MJXp-Span-80\"><span class=\"MJXp-mn\" id=\"MJXp-Span-81\" style=\"margin-right: 0.05em;\">10</span><span class=\"MJXp-mn MJXp-script\" id=\"MJXp-Span-82\" style=\"vertical-align: 0.5em;\">4</span></span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-22-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-98\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-99\"><span class=\"mn\" id=\"MathJax-Span-100\" style=\"font-family: MathJax_Main;\">1</span><span class=\"mo\" id=\"MathJax-Span-101\" style=\"font-family: MathJax_Main; padding-left: 0.301em;\">≤</span><span class=\"mi\" id=\"MathJax-Span-102\" style=\"font-family: MathJax_Math-italic; padding-left: 0.301em;\">t</span><span class=\"mo\" id=\"MathJax-Span-103\" style=\"font-family: MathJax_Main; padding-left: 0.301em;\">≤</span><span class=\"msubsup\" id=\"MathJax-Span-104\" style=\"padding-left: 0.301em;\"><span style=\"display: inline-block; position: relative; width: 1.432em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mn\" id=\"MathJax-Span-105\" style=\"font-family: MathJax_Main;\">10</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -4.402em; left: 1.015em;\"><span class=\"mn\" id=\"MathJax-Span-106\" style=\"font-size: 70.7%; font-family: MathJax_Main;\">4</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-22\">1 \\le t \\le 10^4</script>). The description of the test cases follows. </p><p>The first line of each test case contains a single integer <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-83\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-84\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-23-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-107\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-108\"><span class=\"mi\" id=\"MathJax-Span-109\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-23\">n</script> (<span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-85\"><span class=\"MJXp-mn\" id=\"MJXp-Span-86\">1</span><span class=\"MJXp-mo\" id=\"MJXp-Span-87\" style=\"margin-left: 0.333em; margin-right: 0.333em;\">≤</span><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-88\">n</span><span class=\"MJXp-mo\" id=\"MJXp-Span-89\" style=\"margin-left: 0.333em; margin-right: 0.333em;\">≤</span><span class=\"MJXp-mn\" id=\"MJXp-Span-90\">2</span><span class=\"MJXp-mo\" id=\"MJXp-Span-91\" style=\"margin-left: 0.267em; margin-right: 0.267em;\">⋅</span><span class=\"MJXp-msubsup\" id=\"MJXp-Span-92\"><span class=\"MJXp-mn\" id=\"MJXp-Span-93\" style=\"margin-right: 0.05em;\">10</span><span class=\"MJXp-mn MJXp-script\" id=\"MJXp-Span-94\" style=\"vertical-align: 0.5em;\">5</span></span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-24-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-110\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-111\"><span class=\"mn\" id=\"MathJax-Span-112\" style=\"font-family: MathJax_Main;\">1</span><span class=\"mo\" id=\"MathJax-Span-113\" style=\"font-family: MathJax_Main; padding-left: 0.301em;\">≤</span><span class=\"mi\" id=\"MathJax-Span-114\" style=\"font-family: MathJax_Math-italic; padding-left: 0.301em;\">n</span><span class=\"mo\" id=\"MathJax-Span-115\" style=\"font-family: MathJax_Main; padding-left: 0.301em;\">≤</span><span class=\"mn\" id=\"MathJax-Span-116\" style=\"font-family: MathJax_Main; padding-left: 0.301em;\">2</span><span class=\"mo\" id=\"MathJax-Span-117\" style=\"font-family: MathJax_Main; padding-left: 0.241em;\">⋅</span><span class=\"msubsup\" id=\"MathJax-Span-118\" style=\"padding-left: 0.241em;\"><span style=\"display: inline-block; position: relative; width: 1.432em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mn\" id=\"MathJax-Span-119\" style=\"font-family: MathJax_Main;\">10</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -4.402em; left: 1.015em;\"><span class=\"mn\" id=\"MathJax-Span-120\" style=\"font-size: 70.7%; font-family: MathJax_Main;\">5</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-24\">1 \\le n \\le 2\\cdot 10^5</script>) — the number of chairs.</p><p>The second line of each test case contains <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-95\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-96\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-25-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-121\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-122\"><span class=\"mi\" id=\"MathJax-Span-123\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-25\">n</script> distinct integers <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-97\"><span class=\"MJXp-msubsup\" id=\"MJXp-Span-98\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-99\" style=\"margin-right: 0.05em;\">p</span><span class=\"MJXp-mn MJXp-script\" id=\"MJXp-Span-100\" style=\"vertical-align: -0.4em;\">1</span></span><span class=\"MJXp-mo\" id=\"MJXp-Span-101\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-msubsup\" id=\"MJXp-Span-102\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-103\" style=\"margin-right: 0.05em;\">p</span><span class=\"MJXp-mn MJXp-script\" id=\"MJXp-Span-104\" style=\"vertical-align: -0.4em;\">2</span></span><span class=\"MJXp-mo\" id=\"MJXp-Span-105\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-mo\" id=\"MJXp-Span-106\" style=\"margin-left: 0em; margin-right: 0em;\">…</span><span class=\"MJXp-mo\" id=\"MJXp-Span-107\" style=\"margin-left: 0em; margin-right: 0.222em;\">,</span><span class=\"MJXp-msubsup\" id=\"MJXp-Span-108\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-109\" style=\"margin-right: 0.05em;\">p</span><span class=\"MJXp-mrow MJXp-script\" id=\"MJXp-Span-110\" style=\"vertical-align: -0.4em;\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-111\">n</span></span></span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-26-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-124\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-125\"><span class=\"msubsup\" id=\"MathJax-Span-126\"><span style=\"display: inline-block; position: relative; width: 0.955em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.396em, 1000.48em, 4.348em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mi\" id=\"MathJax-Span-127\" style=\"font-family: MathJax_Math-italic;\">p</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -3.807em; left: 0.479em;\"><span class=\"mn\" id=\"MathJax-Span-128\" style=\"font-size: 70.7%; font-family: MathJax_Main;\">1</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span><span class=\"mo\" id=\"MathJax-Span-129\" style=\"font-family: MathJax_Main;\">,</span><span class=\"msubsup\" id=\"MathJax-Span-130\" style=\"padding-left: 0.182em;\"><span style=\"display: inline-block; position: relative; width: 0.955em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.396em, 1000.48em, 4.348em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mi\" id=\"MathJax-Span-131\" style=\"font-family: MathJax_Math-italic;\">p</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -3.807em; left: 0.479em;\"><span class=\"mn\" id=\"MathJax-Span-132\" style=\"font-size: 70.7%; font-family: MathJax_Main;\">2</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span><span class=\"mo\" id=\"MathJax-Span-133\" style=\"font-family: MathJax_Main;\">,</span><span class=\"mo\" id=\"MathJax-Span-134\" style=\"font-family: MathJax_Main; padding-left: 0.182em;\">…</span><span class=\"mo\" id=\"MathJax-Span-135\" style=\"font-family: MathJax_Main; padding-left: 0.182em;\">,</span><span class=\"msubsup\" id=\"MathJax-Span-136\" style=\"padding-left: 0.182em;\"><span style=\"display: inline-block; position: relative; width: 1.015em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.396em, 1000.48em, 4.348em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mi\" id=\"MathJax-Span-137\" style=\"font-family: MathJax_Math-italic;\">p</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -3.807em; left: 0.479em;\"><span class=\"texatom\" id=\"MathJax-Span-138\"><span class=\"mrow\" id=\"MathJax-Span-139\"><span class=\"mi\" id=\"MathJax-Span-140\" style=\"font-size: 70.7%; font-family: MathJax_Math-italic;\">n</span></span></span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-26\">p_1, p_2,\\ldots,p_{n}</script> — the permutation <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-112\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-113\">p</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-27-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-141\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-142\"><span class=\"mi\" id=\"MathJax-Span-143\" style=\"font-family: MathJax_Math-italic;\">p</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-27\">p</script>.</p><p>It is guaranteed that the sum of <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-114\"><span class=\"MJXp-mi MJXp-italic\" id=\"MJXp-Span-115\">n</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-28-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-144\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-145\"><span class=\"mi\" id=\"MathJax-Span-146\" style=\"font-family: MathJax_Math-italic;\">n</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-28\">n</script> over all test cases does not exceed <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-116\"><span class=\"MJXp-mn\" id=\"MJXp-Span-117\">2</span><span class=\"MJXp-mo\" id=\"MJXp-Span-118\" style=\"margin-left: 0.267em; margin-right: 0.267em;\">⋅</span><span class=\"MJXp-msubsup\" id=\"MJXp-Span-119\"><span class=\"MJXp-mn\" id=\"MJXp-Span-120\" style=\"margin-right: 0.05em;\">10</span><span class=\"MJXp-mn MJXp-script\" id=\"MJXp-Span-121\" style=\"vertical-align: 0.5em;\">5</span></span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-29-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-147\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-148\"><span class=\"mn\" id=\"MathJax-Span-149\" style=\"font-family: MathJax_Main;\">2</span><span class=\"mo\" id=\"MathJax-Span-150\" style=\"font-family: MathJax_Main; padding-left: 0.241em;\">⋅</span><span class=\"msubsup\" id=\"MathJax-Span-151\" style=\"padding-left: 0.241em;\"><span style=\"display: inline-block; position: relative; width: 1.432em; height: 0px;\"><span style=\"position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;\"><span class=\"mn\" id=\"MathJax-Span-152\" style=\"font-family: MathJax_Main;\">10</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span><span style=\"position: absolute; top: -4.402em; left: 1.015em;\"><span class=\"mn\" id=\"MathJax-Span-153\" style=\"font-size: 70.7%; font-family: MathJax_Main;\">5</span><span style=\"display: inline-block; width: 0px; height: 3.991em;\"></span></span></span></span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-29\">2\\cdot10^5</script>. </p><br><br><div class=\"section-title\">Output</div><p>Output a single integer — the maximum number of chairs you can sit on.</p><br><br><div class=\"section-title\">Note</div><p>In the first test case, you can proceed as follows: </p><ol> <li> You visit the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-122\"><span class=\"MJXp-mn\" id=\"MJXp-Span-123\">1</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-30-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-154\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-155\"><span class=\"mn\" id=\"MathJax-Span-156\" style=\"font-family: MathJax_Main;\">1</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-30\">1</script>-st chair, sit on it, and mark the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-124\"><span class=\"MJXp-mn\" id=\"MJXp-Span-125\">3</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-31-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-157\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-158\"><span class=\"mn\" id=\"MathJax-Span-159\" style=\"font-family: MathJax_Main;\">3</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-31\">3</script>-rd chair. </li><li> You visit the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-126\"><span class=\"MJXp-mn\" id=\"MJXp-Span-127\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-32-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-160\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-161\"><span class=\"mn\" id=\"MathJax-Span-162\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-32\">2</script>-nd chair, sit on it, and mark the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-128\"><span class=\"MJXp-mn\" id=\"MJXp-Span-129\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-33-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-163\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-164\"><span class=\"mn\" id=\"MathJax-Span-165\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-33\">2</script>-nd chair. </li><li> You visit the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-130\"><span class=\"MJXp-mn\" id=\"MJXp-Span-131\">3</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-34-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-166\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-167\"><span class=\"mn\" id=\"MathJax-Span-168\" style=\"font-family: MathJax_Main;\">3</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-34\">3</script>-rd chair. Since it is marked, you end the game. </li></ol> Therefore, using this sequence, you can sit on a total of <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-132\"><span class=\"MJXp-mn\" id=\"MJXp-Span-133\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-35-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-169\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-170\"><span class=\"mn\" id=\"MathJax-Span-171\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-35\">2</script> chairs. It can be shown that the maximum number of chairs using any sequence of moves is <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-134\"><span class=\"MJXp-mn\" id=\"MJXp-Span-135\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-36-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-172\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-173\"><span class=\"mn\" id=\"MathJax-Span-174\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-36\">2</script>.<p>In the second test case, you can proceed as follows: </p><ol> <li> You visit the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-136\"><span class=\"MJXp-mn\" id=\"MJXp-Span-137\">1</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-37-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-175\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-176\"><span class=\"mn\" id=\"MathJax-Span-177\" style=\"font-family: MathJax_Main;\">1</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-37\">1</script>-st chair, sit on it, and mark the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-138\"><span class=\"MJXp-mn\" id=\"MJXp-Span-139\">4</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-38-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-178\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-179\"><span class=\"mn\" id=\"MathJax-Span-180\" style=\"font-family: MathJax_Main;\">4</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-38\">4</script>-th chair. </li><li> You visit the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-140\"><span class=\"MJXp-mn\" id=\"MJXp-Span-141\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-39-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-181\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-182\"><span class=\"mn\" id=\"MathJax-Span-183\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-39\">2</script>-nd chair and skip it. </li><li> You visit the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-142\"><span class=\"MJXp-mn\" id=\"MJXp-Span-143\">3</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-40-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-184\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-185\"><span class=\"mn\" id=\"MathJax-Span-186\" style=\"font-family: MathJax_Main;\">3</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-40\">3</script>-rd chair, sit on it, and mark the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-144\"><span class=\"MJXp-mn\" id=\"MJXp-Span-145\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-41-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-187\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-188\"><span class=\"mn\" id=\"MathJax-Span-189\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-41\">2</script>-nd chair. </li><li> You visit the <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-146\"><span class=\"MJXp-mn\" id=\"MJXp-Span-147\">4</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-42-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-190\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-191\"><span class=\"mn\" id=\"MathJax-Span-192\" style=\"font-family: MathJax_Main;\">4</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-42\">4</script>-th chair. Since it is marked, you end the game. </li></ol> Therefore, using this sequence, you can sit on a total of <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-148\"><span class=\"MJXp-mn\" id=\"MJXp-Span-149\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-43-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-193\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-194\"><span class=\"mn\" id=\"MathJax-Span-195\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-43\">2</script> chairs. It can be shown that the maximum number of chairs using any sequence of moves is <span class=\"MathJax_Preview\" style=\"color: inherit;\"><span class=\"MJXp-math\" id=\"MJXp-Span-150\"><span class=\"MJXp-mn\" id=\"MJXp-Span-151\">2</span></span></span><span class=\"MathJax MathJax_Processed\" id=\"MathJax-Element-44-Frame\" tabindex=\"0\" style=\"\"><nobr><span class=\"math\" id=\"MathJax-Span-196\"><span style=\"display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;\"><span style=\"position: absolute;\"><span class=\"mrow\" id=\"MathJax-Span-197\"><span class=\"mn\" id=\"MathJax-Span-198\" style=\"font-family: MathJax_Main;\">2</span></span></span></span></span></nobr></span><script type=\"math/tex\" id=\"MathJax-Element-44\">2</script>. <br><br>",
+        "testCases": {
+            "sample": [
+                {
+                    "input": "4\n3\n3 2 1\n5\n4 3 2 5 1\n4\n4 2 1 3\n4\n2 3 4 1",
+                    "expectedOutput": "2231",
+                    "isSample": true
+                }
+            ],
+            "hidden": []      
+        }
+    }
+]

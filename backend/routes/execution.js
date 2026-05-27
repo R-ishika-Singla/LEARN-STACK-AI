@@ -1,18 +1,15 @@
-import express from 'express';
-import axios from 'axios';
-import prisma from '../db.js';
-import { authenticateToken } from '../middleware/authMiddleware.js';
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import puppeteer from 'puppeteer-extra';
-import StealthPlugin from 'puppeteer-extra-plugin-stealth';
-
+const express = require('express');
+const axios = require('axios');
+const { PrismaClient } = require('@prisma/client');
+const { authenticateToken } = require('../middleware/authMiddleware');
+const fs = require('fs/promises');
+const path = require('path');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
-const router = express.Router();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const router = express.Router();
+const prisma = new PrismaClient({});
 
 async function getQuestionsData() {
   const filePath = path.join(__dirname, '../leetcode_questions.json');
@@ -25,11 +22,12 @@ async function getQuestionsData() {
   }
 }
 
+// Map Monaco language strings to Judge0 language IDs
 const LANGUAGE_MAPPING = {
-  'javascript': 63,
-  'python': 71,
-  'cpp': 54,
-  'java': 62
+  'javascript': 63, // Node.js
+  'python': 71,     // Python 3
+  'cpp': 54,        // C++
+  'java': 62        // Java
 };
 
 router.post('/submit', authenticateToken, async (req, res) => {
@@ -48,6 +46,7 @@ router.post('/submit', authenticateToken, async (req, res) => {
 
     const judge0Url = process.env.JUDGE0_API_URL || 'https://ce.judge0.com';
 
+    // --- MODE 1: Competitive Auto-Grading (Test Cases) ---
     if (problemId) {
       const allQuestions = await getQuestionsData();
       const question = allQuestions.find(q => String(q.id) === String(problemId));
@@ -83,18 +82,18 @@ router.post('/submit', authenticateToken, async (req, res) => {
         if (judgeData.status?.id === 3) passedCount++;
         
         results.push({ 
-          testCaseIndex: i + 1, 
-          status: judgeData.status?.description,
-          output: judgeData.stdout,
-          expected: testCases[i].expectedOutput
+            testCaseIndex: i + 1, 
+            status: judgeData.status?.description,
+            output: judgeData.stdout,
+            expected: testCases[i].expectedOutput
         });
 
         if (judgeData.status?.id === 11) {
-          firstCompileError = judgeData.compile_output;
-          break; 
+            firstCompileError = judgeData.compile_output;
+            break; 
         }
         if (judgeData.status?.id >= 6 && judgeData.status?.id <= 12 && judgeData.status?.id !== 11) {
-          firstStderr = judgeData.stderr;
+            firstStderr = judgeData.stderr;
         }
       }
 
@@ -125,6 +124,7 @@ router.post('/submit', authenticateToken, async (req, res) => {
       });
     }
 
+    // --- MODE 2: Manual Sandbox Execution ---
     const judgeResponse = await axios.post(`${judge0Url}/submissions?base64_encoded=false&wait=true`, {
       source_code: code,
       language_id: languageId,
@@ -162,7 +162,6 @@ router.post('/submit', authenticateToken, async (req, res) => {
   }
 });
 
-//  GET QUESTIONS LIST 
 router.get('/questions', authenticateToken, async (req, res) => {
   try {
     const questions = await getQuestionsData();
@@ -244,4 +243,4 @@ router.post('/import-codeforces', authenticateToken, async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
