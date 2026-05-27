@@ -36,7 +36,7 @@ export default function CandidateDashboard() {
       });
       const statusData = await statusRes.json();
       
-      if (!statusData.linked) {
+      if(!statusData.linked) {
         navigate('/onboarding');
         return;
       }

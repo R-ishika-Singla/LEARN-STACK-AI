@@ -59,25 +59,25 @@ export default function RecruiterDashboard() {
         })
       });
 
-      console.log('📡 Backend API Response Status:', response.status);
+      console.log('Backend API Response Status:', response.status);
 
       if (!response.ok) {
         const errorText = await response.text();
-        console.error('❌ Backend API Error:', response.status);
+        console.error(' Backend API Error:', response.status);
         console.error('Error details:', errorText);
 
         // Fallback: Try individual API calls if backend endpoint doesn't exist
-        console.log('📌 Falling back to individual API calls...');
+        console.log(' Falling back to individual API calls...');
         return await fetchCandidateDataFallback(github, leetcode, codeforces);
       }
 
       const data = await response.json();
-      console.log('✅ Backend Response Data:', data);
+      console.log(' Backend Response Data:', data);
 
       return data;
 
     } catch (error) {
-      console.error('❌ Error fetching candidate data:', error);
+      console.error(' Error fetching candidate data:', error);
       console.error('Error stack:', error.stack);
       alert('Failed to fetch candidate data. Please check the handles and try again.');
       return null;
@@ -88,33 +88,33 @@ export default function RecruiterDashboard() {
 
   // Fallback function for individual API calls (only GitHub, since LeetCode/CF have CORS issues)
   const fetchCandidateDataFallback = async (github, leetcode, codeforces) => {
-    console.log('🔄 Using fallback method with GitHub only (CORS restrictions on LeetCode/Codeforces)');
+    console.log('Using fallback method with GitHub only (CORS restrictions on LeetCode/Codeforces)');
 
     let githubData = null;
     if (github) {
-      console.log('📊 Fetching GitHub data for:', github);
+      console.log(' Fetching GitHub data for:', github);
       try {
         const githubProfileUrl = `https://api.github.com/users/${github}`;
-        console.log('🔗 GitHub Profile URL:', githubProfileUrl);
+        console.log(' GitHub Profile URL:', githubProfileUrl);
 
         const githubRes = await fetch(githubProfileUrl);
-        console.log('📡 GitHub API Response Status:', githubRes.status);
+        console.log(' GitHub API Response Status:', githubRes.status);
 
         if (!githubRes.ok) {
           const errorText = await githubRes.text();
-          console.error('❌ GitHub API Error:', githubRes.status);
+          console.error(' GitHub API Error:', githubRes.status);
           console.error('Error Response:', errorText);
         } else {
           const profileData = await githubRes.json();
-          console.log('✅ GitHub Profile Data:', profileData);
+          console.log(' GitHub Profile Data:', profileData);
 
           const reposUrl = `https://api.github.com/users/${github}/repos?sort=updated&per_page=100`;
           const reposRes = await fetch(reposUrl);
-          console.log('📡 GitHub Repos Response Status:', reposRes.status);
+          console.log(' GitHub Repos Response Status:', reposRes.status);
 
           if (reposRes.ok) {
             const reposData = await reposRes.json();
-            console.log('✅ Raw repos data length:', reposData.length);
+            console.log(' Raw repos data length:', reposData.length);
 
             githubData = {
               followers: profileData.followers,
@@ -129,22 +129,22 @@ export default function RecruiterDashboard() {
                 updatedAt: repo.updated_at
               }))
             };
-            console.log('✅ GitHub repos loaded:', reposData.length, 'repositories');
+            console.log(' GitHub repos loaded:', reposData.length, 'repositories');
             console.log('Total stars:', githubData.allRepos.reduce((s, r) => s + r.stars, 0));
           }
         }
       } catch (err) {
-        console.error('❌ GitHub fetch error:', err);
+        console.error(' GitHub fetch error:', err);
       }
     }
 
     // Calculate scores using backend logic
-    console.log('🧮 Calculating scores from GitHub data only (fallback)...');
+    console.log('Calculating scores from GitHub data only (fallback)...');
 
     const totalStars = githubData?.allRepos?.reduce((s, r) => s + r.stars, 0) || 0;
     const repoCount = githubData?.allRepos?.length || 0;
     const githubScore = Math.min(100, totalStars * 1.5 + repoCount * 2);
-    console.log('📈 GitHub Score:', githubScore, '(Stars:', totalStars, ', Repos:', repoCount, ')');
+    console.log(' GitHub Score:', githubScore, '(Stars:', totalStars, ', Repos:', repoCount, ')');
 
     // Without LeetCode/Codeforces data in fallback
     const dsaScore = 0;
@@ -158,7 +158,7 @@ export default function RecruiterDashboard() {
 
     let overall = 0.3 * githubScore + 0.25 * dsaScore + 0.25 * projectQuality + 0.2 * consistencyScore;
     overall = Math.min(100, overall);
-    console.log('📈 Overall Score:', overall, '(GitHub fallback - no LeetCode/Codeforces data)');
+    console.log(' Overall Score:', overall, '(GitHub fallback - no LeetCode/Codeforces data)');
 
     let careerLevel = 'Beginner';
     if (overall >= 80) careerLevel = 'Advanced';
@@ -185,23 +185,23 @@ export default function RecruiterDashboard() {
       weaknesses: ['LeetCode/Codeforces data unavailable - use backend API']
     };
 
-    console.log('✅ Candidate profile (fallback) complete:', candidateData);
+    console.log(' Candidate profile (fallback) complete:', candidateData);
     return candidateData;
   };
 
   const handleManualSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('🚀 Form submission started');
+    console.log(' Form submission started');
     console.log('Current form values:', manualForm);
 
     if (!manualForm.githubHandle && !manualForm.leetcodeHandle && !manualForm.codeforcesHandle) {
-      console.warn('⚠️ No handles provided');
+      console.warn(' No handles provided');
       alert('Please enter at least one handle (GitHub, LeetCode, or Codeforces)');
       return;
     }
 
-    console.log('📍 Starting data fetch for handles:', {
+    console.log(' Starting data fetch for handles:', {
       github: manualForm.githubHandle,
       leetcode: manualForm.leetcodeHandle,
       codeforces: manualForm.codeforcesHandle
@@ -214,20 +214,20 @@ export default function RecruiterDashboard() {
     );
 
     if (candidateData) {
-      console.log('✅ Candidate data received:', candidateData);
+      console.log('Candidate data received:', candidateData);
 
       const newCandidate = {
         id: Date.now(),
         ...candidateData
       };
 
-      console.log('📝 Adding new candidate to list:', newCandidate.id, newCandidate.name);
+      console.log(' Adding new candidate to list:', newCandidate.id, newCandidate.name);
 
       setAllCandidates([...allCandidates, newCandidate]);
       setCandidates([...candidates, newCandidate]);
       setSelectedPreview(newCandidate.id);
 
-      console.log('✅ Candidate added successfully. Total candidates:', allCandidates.length + 1);
+      console.log(' Candidate added successfully. Total candidates:', allCandidates.length + 1);
 
       // Clear form
       setManualForm({
@@ -236,7 +236,7 @@ export default function RecruiterDashboard() {
         codeforcesHandle: ''
       });
     } else {
-      console.error('❌ Failed to fetch candidate data');
+      console.error(' Failed to fetch candidate data');
     }
   };
 
@@ -263,7 +263,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
     console.log('📁 File upload initiated:', file?.name);
 
     if (!file) {
-      console.warn('⚠️ No file selected');
+      console.warn(' No file selected');
       return;
     }
 
@@ -277,7 +277,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
     formData.append('file', file);
 
     try {
-      console.log('📤 Uploading file to backend:', file.name);
+      console.log(' Uploading file to backend:', file.name);
       const response = await fetch('http://localhost:5001/api/analytics/bulk-upload', {
         method: 'POST',
         headers: {
@@ -286,7 +286,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
         body: formData
       });
 
-      console.log('📡 Upload response status:', response.status);
+      console.log(' Upload response status:', response.status);
 
       if (!response.ok) {
         const errorText = await response.text();
@@ -294,10 +294,10 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
       }
 
       const result = await response.json();
-      console.log('✅ Backend parsing result:', result);
+      console.log(' Backend parsing result:', result);
 
       if (result.validCandidates === 0) {
-        alert('⚠️ No valid candidates found in file. Please check the format.');
+        alert(' No valid candidates found in file. Please check the format.');
         setLoading(false);
         return;
       }
@@ -326,7 +326,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
         status: 'analyzing'
       }));
 
-      console.log(`✅ Parsed ${stubs.length} candidates. Starting sequential analysis…`);
+      console.log(` Parsed ${stubs.length} candidates. Starting sequential analysis…`);
       setAllCandidates(prev => [...prev, ...stubs]);
       setCandidates(prev => [...prev, ...stubs]);
       setActiveTab('candidates');
@@ -347,7 +347,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
           continue;
         }
 
-        console.log(`🔎 Analyzing ${i + 1}/${stubs.length}: ${stub.name}`);
+        console.log(` Analyzing ${i + 1}/${stubs.length}: ${stub.name}`);
         try {
           const data = await fetchCandidateData(
             src.githubHandle,
@@ -384,11 +384,11 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
         if (i < stubs.length - 1) await new Promise(r => setTimeout(r, 500));
       }
 
-      console.log(`✅ Bulk analysis complete. Succeeded: ${succeeded}, Failed: ${failed}, Total: ${stubs.length}`);
+      console.log(` Bulk analysis complete. Succeeded: ${succeeded}, Failed: ${failed}, Total: ${stubs.length}`);
       alert(`Imported ${stubs.length} candidates.\nAnalyzed successfully: ${succeeded}\nFailed: ${failed}`);
 
     } catch (error) {
-      console.error('❌ Upload error:', error);
+      console.error(' Upload error:', error);
       alert(`Error uploading file: ${error.message}`);
     } finally {
       setLoading(false);
@@ -397,7 +397,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
 
   // Apply filters
   const applyFilters = () => {
-    console.log('🔍 Applying filters...');
+    console.log(' Applying filters...');
     console.log('Current filter settings:', filters);
     console.log('Total candidates before filter:', allCandidates.length);
 
@@ -455,7 +455,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
       console.log('After LC difficulty:', filtered.length);
     }
 
-    console.log('✅ Filters applied. Final count:', filtered.length);
+    console.log(' Filters applied. Final count:', filtered.length);
 
     setCandidates(filtered);
     setAppliedFilters({ ...filters });
@@ -482,7 +482,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
 
   // Export selected candidates
   const exportCandidates = () => {
-    console.log('📤 Starting export process...');
+    console.log(' Starting export process...');
     console.log('Selected candidates count:', selectedCandidates.length);
     console.log('Total available candidates:', allCandidates.length);
 
@@ -491,7 +491,7 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
       candidates;
 
     if (toExport.length === 0) {
-      alert('⚠️ No candidates to export. Please select candidates first.');
+      alert(' No candidates to export. Please select candidates first.');
       return;
     }
 
@@ -533,8 +533,8 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
     link.style.display = 'none';
 
     document.body.appendChild(link);
-    console.log('🔗 Download link created:', url);
-    console.log('📥 Triggering download:', fileName);
+    console.log(' Download link created:', url);
+    console.log(' Triggering download:', fileName);
 
     link.click();
 
@@ -543,8 +543,8 @@ INSTRUCTIONS: Fill in candidate data matching the columns exactly. Scores (0-100
       URL.revokeObjectURL(url);
     }, 100);
 
-    console.log('✅ Export completed:', fileName);
-    alert(`✅ Downloaded ${toExport.length} candidates as ${fileName}`);
+    console.log(' Export completed:', fileName);
+    alert(` Downloaded ${toExport.length} candidates as ${fileName}`);
   };
 
   const filteredCandidates = candidates.filter(c =>
