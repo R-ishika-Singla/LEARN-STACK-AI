@@ -1,1 +1,1 @@
-# LearnStack Ai Project
+# LearnStack Ai is a comprehensive full-stack application designed to streamline the learning process for developers. By combining Retrieval-Augmented Generation (RAG) technology with real-time coding profile analytics, CodingBuddy serves as an intelligent study companion and a performance tracker. It helps users manage study materials, resolve doubts via AI, and generate professional insights based on their competitive programming and development activity.
